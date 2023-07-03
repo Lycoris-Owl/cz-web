@@ -1,0 +1,67 @@
+.tail {
+    height: 250px;
+    background: #105fa5;
+    overflow: hidden;
+}
+
+.tl-box {
+    margin-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #3977ae;
+}
+
+.tail-list {
+    list-style: none;
+}
+
+.tail-list li {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.tail-list li a {
+    color: #fff;
+    font-weight: 100;
+}
+
+.tl-tip {
+    position: relative;
+    overflow: hidden;
+    height: 150px
+}
+
+.cprt {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 13px;
+    color: #fff;
+}
+
+.scan {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 15px;
+}
+
+.scan-lab {
+    float: right;
+    margin-left: 30px;
+}
+
+.scan-text {
+    float: left;
+    width: 100px;
+    text-align: center;
+}
+
+.scan-text a {
+    color: #fff;
+    font-size: 12px;
+}
+
+.scan-box img {
+    width: 100px;
+}

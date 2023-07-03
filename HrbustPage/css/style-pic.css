@@ -1,0 +1,23 @@
+.div-pic {
+    background: url(../img/banbd.jpg) no-repeat center;
+    border-top: 5px solid #D6BD88;
+    overflow: hidden;
+}
+
+.pic-inner {
+    height: 433px;
+}
+
+.title {
+    display: inline-block;
+    padding: 0 20px;
+    border-radius: 15px 15px 0 0;
+    background: #bedcf6;
+    color: #105fa5;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.more {
+    float: right;
+}

@@ -1,0 +1,49 @@
+.act {
+    background: url(../img/bg-act.png) no-repeat center;
+    overflow: hidden;
+}
+
+.act .left,
+.act .mid {
+    float: left;
+    width: 350px;
+}
+
+.act .mid {
+    margin-left: 25px;
+}
+
+.act .right {
+    float: right;
+    width: 350px;
+}
+
+.act-cont-box>div {
+    overflow: hidden;
+    margin: 15px 0 15px 0;
+}
+
+.act-cont-box div a {
+    float: left;
+    font-size: 14px;
+}
+
+.sub-date {
+    font-size: 14px;
+    color: grey;
+}
+
+.act-cont-box div div {
+    float: right;
+}
+
+.act a {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 300px;
+}
+
+.act .more {
+    width: auto;
+}

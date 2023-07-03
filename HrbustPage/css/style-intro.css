@@ -1,0 +1,66 @@
+.subject-box {
+    float: left;
+    height: 45px;
+    width: 320px;
+    margin-bottom: 40px;
+    margin-right: 40px;
+    border: 1px solid #b9c9d7;
+    background: #ebf1f5;
+}
+
+.subject {
+    display: inline-block;
+    height: 45px;
+    width: 320px;
+    text-align: center;
+    line-height: 45px;
+    color: black;
+}
+
+.i1 {
+    background: url(../img/icon1.png);
+}
+
+.i2 {
+    background: url(../img/icon2.png);
+}
+
+.i3 {
+    background: url(../img/icon3.png);
+}
+
+.i4 {
+    background: url(../img/icon4.png);
+}
+
+.i5 {
+    background: url(../img/icon5.png);
+}
+
+.i6 {
+    background: url(../img/icon6.png);
+}
+
+.i7 {
+    background: url(../img/icon7.png);
+}
+
+.resource {
+    height: 200px;
+}
+
+.icon {
+    float: left;
+    height: 75px;
+    width: 145px;
+    margin-right: 12px;
+}
+
+.a-icon {
+    display: inline-block;
+    height: 75px;
+    width: 145px;
+    text-align: center;
+    line-height: 100px;
+    color: black;
+}
