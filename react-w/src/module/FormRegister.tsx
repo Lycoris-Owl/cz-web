@@ -3,12 +3,15 @@ import { IOLab } from './IOLab';
 import { Link } from 'react-router-dom';
 import '../style/Form.css';
 import { Button, Input, Space } from 'antd';
+import { client } from '..';
+import { gql } from '@apollo/client';
 
 function FromRegister() {
     const [infoTips, setInfoTips] = useState('')
     const [id, setId] = useState('')
     const [pw, setPw] = useState('')
     const [pwr, setPwr] = useState('')
+    //当用户更新输入时调用
     function handleIdChange(id: string) {
         setId(id)
     }
@@ -18,11 +21,34 @@ function FromRegister() {
     function handlePwrChange(pwr: string) {
         setPwr(pwr)
     }
-    function handleRegister() {
+    //点击注册时调用
+    async function handleRegister() {
+        setInfoTips('请稍候...')
         if (pw !== pwr) {
             setInfoTips('两次输入的密码不一致')
         } else {
-            setInfoTips('注册成功')
+            // 1.gql
+            const gqlMutationReg = gql`
+                mutation {
+                    register(userId: "${id}", userPw: "${pw}")
+                }
+            `
+            // 更改
+            let result: boolean = false
+            try {
+                const response = await client.mutate({ mutation: gqlMutationReg });
+                result = response.data.register
+            } catch (error) {
+                setInfoTips('请求错误，请稍后再试')
+                return
+            }
+            if (result) {
+                setInfoTips('注册成功')
+                return
+            } else {
+                setInfoTips('用户名已被占用')
+                return
+            }
         }
     }
     return (

@@ -6,17 +6,28 @@ import reportWebVitals from './reportWebVitals';
 
 import { HashRouter } from 'react-router-dom';//react-router BR
 import store from './store';
+import { ApolloClient, InMemoryCache } from '@apollo/client';
+import { ApolloProvider } from '@apollo/client/react';
+
+const client = new ApolloClient({
+  uri: 'http://localhost:4000/graphql',
+  cache: new InMemoryCache()
+})
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <HashRouter>
-      <App />
-    </HashRouter>
+    <ApolloProvider client={client}>
+      <HashRouter>
+        <App />
+      </HashRouter>
+    </ApolloProvider>
   </React.StrictMode>
 );
+
+export { client }
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
